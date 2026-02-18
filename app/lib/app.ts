@@ -207,14 +207,14 @@ export class Application {
 
         this.tray.on('click', () => setTimeout(() => this.focus()))
 
-        
+
         const contextMenu = Menu.buildFromTemplate([{
             label: 'Show',
             click: () => this.focus(),
         },{
             label: 'Quit',
             click: () => {
-                this.quitRequested = true
+                this.setQuitRequest(true)
                 this.broadcast('quit-request')
                 app.quit()
             },
