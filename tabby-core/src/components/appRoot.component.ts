@@ -150,7 +150,7 @@ export class AppRootComponent {
         })
 
         this.hostWindow.windowCloseRequest$.subscribe(async () => {
-            if(this.config.store.minimizeInsteadOfExit && !this.forceQuit){
+            if(this.config.store.minimizeInsteadOfExit && !this.forceQuit) {
                 // minimize
                 require('electron').ipcRenderer.send('toggle-window-switch-status')
                 return

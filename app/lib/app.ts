@@ -26,9 +26,9 @@ export class Application {
     userPluginsPath: string
 
     // set quit requested if the user didn't open "minimize instead of quit feature"
-    private setQuitRequest(force : boolean = false){
-        if(!this.configStore.minimizeInsteadOfExit || force){
-            this.quitRequested = true;
+    private setQuitRequest (force = false) {
+        if (!this.configStore.minimizeInsteadOfExit || force) {
+            this.quitRequested = true
         }
     }
 
@@ -211,7 +211,7 @@ export class Application {
         const contextMenu = Menu.buildFromTemplate([{
             label: 'Show',
             click: () => this.focus(),
-        },{
+        }, {
             label: 'Quit',
             click: () => {
                 this.setQuitRequest(true)
